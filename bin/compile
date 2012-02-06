@@ -24,8 +24,8 @@ echo 'Pre-move executing'
 
 # move app things to www
 mkdir -p $CACHE_DIR/www
-mv * $CACHE_DIR/www
-mv $CACHE_DIR/www .
+cp -R * $CACHE_DIR/www
+cp -R $CACHE_DIR/www .
 
 # add custom webroot directory
 # mkdir -p $CACHE_DIR/www/public
