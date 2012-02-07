@@ -90,6 +90,6 @@ for DIR in $APACHE_PATH $PHP_PATH ; do
   cp -R $DIR $CACHE_DIR/$DIR
 done
 
-httpd -l
+/app/apache/bin/httpd -l
 
 
