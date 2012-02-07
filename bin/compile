@@ -21,6 +21,8 @@ shopt -s dotglob
 cd $BUILD_DIR
 
 echo 'Pre-move executing'
+echo $CACHE_DIR
+echo $BUILD_DIR
 
 # move app things to www
 mkdir -p $CACHE_DIR/www
@@ -89,7 +91,5 @@ for DIR in $APACHE_PATH $PHP_PATH ; do
   rm -rf $CACHE_DIR/$DIR
   cp -R $DIR $CACHE_DIR/$DIR
 done
-
-ls -l /app/apache/bin
 
 
