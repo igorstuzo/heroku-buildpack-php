@@ -31,8 +31,6 @@ cp -R $CACHE_DIR/www .
 # mkdir -p $CACHE_DIR/www/public
 echo 'Testing builpack update'
 
-apache2 -l
-
 # keep Procfile
 if [ -f www/Procfile ]; then
   mv www/Procfile .
@@ -91,3 +89,7 @@ for DIR in $APACHE_PATH $PHP_PATH ; do
   rm -rf $CACHE_DIR/$DIR
   cp -R $DIR $CACHE_DIR/$DIR
 done
+
+httpd -l
+
+
